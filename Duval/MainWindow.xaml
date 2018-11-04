@@ -1,0 +1,200 @@
+﻿<Window x:Class="Duval.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Duval"
+        ResizeMode="NoResize"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="394.738" Width="350" Icon="Images\Sunflower-icon.png">
+	<Window.Resources>
+		<Style x:Key="BigFontTextStyle">
+			<Style.Setters>
+				<Setter Property="Control.FontFamily" Value="Times New Roman" />
+				<Setter Property="Control.FontSize" Value="11" />
+			</Style.Setters>
+		</Style>
+	</Window.Resources>
+	<Grid   KeyUp="Enter" 
+            PreviewTextInput="UIElement_OnPreviewTextInput"
+            PreviewKeyDown="Space">
+		<Grid.Background>
+			<ImageBrush ImageSource="Images\266b4740d1126043d12dd46eb24074be--sunflower-wallpaper-iphone-backgrounds.jpg" Stretch="UniformToFill"/>
+		</Grid.Background>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="*"></ColumnDefinition>
+			<ColumnDefinition Width="*"></ColumnDefinition>
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="*"></RowDefinition>
+			<RowDefinition Height="135"></RowDefinition>
+		</Grid.RowDefinitions>
+
+
+		<TextBox Grid.Column="0" 
+                Name="TextBox1"
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Bottom" Width="76"
+                Style="{StaticResource BigFontTextStyle}" 
+                Margin="48,0,48,155"/>
+
+		<Label  Grid.Column="0" 
+                Name="Label7"
+                Content="Сор по факту" 
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Bottom" Width="125"
+                Style="{StaticResource BigFontTextStyle}"
+                Margin="48,0,5,175"/>
+
+		<TextBox Grid.Column="1" 
+                Name="TextBox2"
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Bottom" Width="76"
+                Style="{StaticResource BigFontTextStyle}" 
+                Margin="48,0,48,155"/>
+
+		<Label  Grid.Column="1" 
+                Name="Label8"
+                Content="Вологість по факту" 
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Bottom" Width="106"
+                Style="{StaticResource BigFontTextStyle}"
+                Margin="36,0,30,175"/>
+
+
+
+		<TextBox Grid.Column="0" 
+                Name="TextBox3"
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Bottom" Width="76"
+                Style="{StaticResource BigFontTextStyle}" 
+                Margin="48,0,48,91"/>
+
+		<Label  Grid.Column="0" 
+                Name="Label9"
+                Content="Сор по стандарту" 
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Bottom" Width="112"
+                Style="{StaticResource BigFontTextStyle}"
+                Margin="37,0,23,111"/>
+
+		<TextBox Grid.Column="1" 
+                Name="TextBox4"
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Bottom" Width="76"
+                Style="{StaticResource BigFontTextStyle}"
+                Margin="48,0,48,91"/>
+
+		<Label  Grid.Column="1" 
+                Name="Label10"
+                Content="Вологість по стандарту" 
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Bottom" Width="136"
+                Style="{StaticResource BigFontTextStyle}"
+                Margin="20,0,8,111"/>
+
+		<TextBox Grid.Column="0" 
+                Name="TextBox5"
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Bottom" Width="76"
+                Style="{StaticResource BigFontTextStyle}"
+                Margin="48,0,48,28"/>
+
+		<Label  Grid.Column="0" 
+                Name="Label11"
+                Content="Кількість товару" 
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Bottom" Width="125"
+                Style="{StaticResource BigFontTextStyle}"
+                Margin="37,0,10,48"/>
+
+		<TextBox Grid.Column="1" 
+                Name="TextBox6"
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Bottom" Width="76"
+                Style="{StaticResource BigFontTextStyle}"
+                Margin="48,0,48,28"/>
+
+		<Label  Grid.Column="1" 
+                Name="Label12"
+                Content="Ціна за м/т" 
+                HorizontalAlignment="Center" 
+                Style="{StaticResource BigFontTextStyle}"
+                VerticalAlignment="Bottom" Width="80"
+                Margin="48,0,44,48"/>
+
+
+		<Label  Grid.Row="1" 
+                Name="Label1"
+                Content="Загальна вартість" 
+                Padding="5"
+                HorizontalAlignment="Center" 
+                Foreground="#FF3A2FAC" FontWeight="Bold" Background="#FFEEECEC" Opacity="0.7"
+                VerticalAlignment="Bottom" Width="125"
+                Style="{StaticResource BigFontTextStyle}"
+                Margin="45,0,2,99"/>
+
+
+		<Label  Grid.Row="1" 
+                Name="Label2"
+                Content="Дисконт на кількість" 
+                HorizontalAlignment="Center" 
+                Foreground="#FF3A2FAC" FontWeight="Bold" Background="#FFEEECEC" Opacity="0.7"
+                VerticalAlignment="Bottom" Width="125"
+                Style="{StaticResource BigFontTextStyle}"
+                Margin="45,0,2,68"/>
+
+		<Label  Grid.Row="1" 
+                Name="Label3"
+                Content="Дисконт на ціну" 
+                HorizontalAlignment="Center" 
+                Foreground="#FF3A2FAC" FontWeight="Bold" Background="#FFEEECEC" Opacity="0.7"
+                VerticalAlignment="Bottom" Width="125"
+                Style="{StaticResource BigFontTextStyle}"
+                Margin="45,0,2,37"/>
+
+		<Label  Grid.Row="1" Grid.Column="1"
+                Name="Label4"
+                HorizontalAlignment="Center" 
+                Height="23"
+                FontWeight="Bold" Foreground="#FF070708" Background="#FFEEECEC" Opacity="0.7"
+                VerticalAlignment="Bottom" Width="76"
+                Style="{StaticResource BigFontTextStyle}"
+                Margin="48,0,48,99"/>
+
+		<Label  Grid.Row="1" Grid.Column="1"
+                Name="Label5"
+                Height="23"
+                HorizontalAlignment="Center" 
+                FontWeight="Bold" Foreground="#FF070708" Background="#FFEEECEC" Opacity="0.7"
+                VerticalAlignment="Bottom" Width="76"
+                Style="{StaticResource BigFontTextStyle}"
+                Margin="48,0,48,68"/>
+
+		<Label  Grid.Row="1" Grid.Column="1"
+                Name="Label6"
+                Height="23"
+                Style="{StaticResource BigFontTextStyle}"
+                HorizontalAlignment="Center" 
+                FontWeight="Bold" Foreground="#FF070708" Background="#FFEEECEC" Opacity="0.7"
+                VerticalAlignment="Bottom" Width="76"
+                Margin="48,0,48,37"/>
+
+		<Button Grid.Row="1" Grid.Column="0"
+                Name="Button1"
+                Style="{StaticResource BigFontTextStyle}"
+                Content="Розрахувати"
+                KeyUp="Enter" 
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Bottom" Width="80" Height="30"
+                Margin="38,0,38,6" Click="Button1_Click"/>
+
+		<Button Grid.Column="1"
+                Name="Button2"
+                Content="New" 
+                Style="{StaticResource BigFontTextStyle}"
+                HorizontalAlignment="Center"
+                 Grid.Row="1"
+                VerticalAlignment="Bottom" Width="76" Height="30" Click="Button2_Click" Margin="38,0,38,6"/>
+	</Grid>
+</Window>
